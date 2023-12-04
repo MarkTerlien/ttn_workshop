@@ -4,7 +4,6 @@ import json     # JSON interface
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from dateutil import parser
-import pandas as pd
 
 # Aurorisatie
 AUTORISATIE = 'NNSXS.WCODVFI7XZZZDWYRQXT5R6PUD7KMTX7PTZRWT5Y.H4JNXDPJAITC2NAGETL7F6FN2CM33YEI5YQIBBXERVVMR4NHQKUQ'
@@ -13,14 +12,9 @@ AUTORISATIE = 'NNSXS.WCODVFI7XZZZDWYRQXT5R6PUD7KMTX7PTZRWT5Y.H4JNXDPJAITC2NAGETL
 APPLICATION = 'demo-lth65'
 DEVICE_EUI = 'eui-a84041ef7186a50f'
 SENSOR = 'TempC_DS'
-#BatV
-#Ext_sensor
-#Hum_SHT
-#TempC_DS
-#TempC_SHT
 
 # Output file
-OUTPUT_CSV_FILE = 'sensor_output.csv'
+GRAFIEK_FILE = 'grafiek.png'
 
 # Definieer lijseten
 timestamps = []
@@ -52,17 +46,20 @@ if response.status_code == 200 :
         values.append(value)
 
     # Plot grafiek
-    print('Maak grafiek')
-    ax = plt.axes()
-    ax.plot(timestamps, values)
-    ax.xaxis.set_major_locator(mdates.DayLocator())
-    ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d %H:%M:%S'))
-    ax.grid(True)
-    ax.set_title('Metingen')
-    ax.set_ylabel(SENSOR)
-    ax.set_xlabel('Datum/tijd')   
-    plt.savefig('test.png')
-    plt.show() 
+    if len(timestamps) > 0:
+        print('Maak grafiek')
+        ax = plt.axes()
+        ax.plot(timestamps, values)
+        ax.xaxis.set_major_locator(mdates.DayLocator())
+        ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d %H:%M:%S'))
+        ax.grid(True)
+        ax.set_title('Metingen')
+        ax.set_ylabel(SENSOR)
+        ax.set_xlabel('Datum/tijd')   
+        plt.savefig(GRAFIEK_FILE)
+        plt.show() 
+    else:
+        print('Geen metingen om te plotten')
 
 else :
 

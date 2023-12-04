@@ -1,6 +1,7 @@
 # Import libraries
 import requests # HTTP interface
 import json     # JSON interface
+from dateutil import parser
 
 # Aurorisatie
 AUTORISATIE = 'NNSXS.WCODVFI7XZZZDWYRQXT5R6PUD7KMTX7PTZRWT5Y.H4JNXDPJAITC2NAGETL7F6FN2CM33YEI5YQIBBXERVVMR4NHQKUQ'
@@ -11,7 +12,7 @@ DEVICE_EUI = 'eui-a84041ef7186a50f'
 SENSOR = 'TempC_DS'
 
 # Naam van csv-bestand
-OUTPUT_CSV_FILE = 'ttn_sensor_output.csv'
+CSV_FILE = 'metingen.csv'
 
 # HTTP headers
 headers = {
@@ -33,7 +34,7 @@ if response.status_code == 200 :
     print ('Request OK')
 
     # Open het csv-bestand en schrijf header
-    fOut = open(OUTPUT_CSV_FILE, 'w')
+    fOut = open(CSV_FILE, 'w')
     fOut.write('Timestamp;Waarde\n')
 
     # Verwerken van response en resultaten opslaan in bestand
@@ -47,10 +48,10 @@ if response.status_code == 200 :
 
         # Schrijf regel in csv-bestand
         i = i + 1
-        fOut.write(received + ';' + value + '\n')
+        fOut.write(received_at + ';' + value + '\n')
 
     # Sluit csv-bestand
-    print(str(i) + ' rijen in bestand ' + OUTPUT_CSV_FILE)
+    print(str(i) + ' rijen in bestand ' + CSV_FILE)
     fOut.close()
 
 else :
