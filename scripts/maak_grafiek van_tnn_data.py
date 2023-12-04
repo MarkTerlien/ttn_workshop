@@ -61,6 +61,7 @@ if response.status_code == 200 :
     ax.set_title('Metingen')
     ax.set_ylabel(SENSOR)
     ax.set_xlabel('Datum/tijd')   
+    plt.savefig('test.png')
     plt.show() 
 
 else :

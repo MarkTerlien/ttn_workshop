@@ -11,7 +11,7 @@ DEVICE_EUI = 'eui-a84041ef7186a50f'
 SENSOR = 'TempC_DS'
 
 # Naam van csv-bestand
-OUTPUT_CSV_FILE = 'c:/temp/ttn_sensor_output.csv'
+OUTPUT_CSV_FILE = 'ttn_sensor_output.csv'
 
 # HTTP headers
 headers = {
