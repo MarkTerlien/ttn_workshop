@@ -48,7 +48,7 @@ if response.status_code == 200 :
 
         # Schrijf regel in csv-bestand
         i = i + 1
-        fOut.write(received_at + ';' + value + '\n')
+        fOut.write(received_at.strftime("%m/%d/%Y, %H:%M:%S") + ';' + str(value) + '\n')
 
     # Sluit csv-bestand
     print(str(i) + ' rijen in bestand ' + CSV_FILE)
