@@ -9,7 +9,7 @@ We maken gebruik van [Codespaces](https://docs.github.com/en/codespaces/overview
 - Open je browser en open de volgende link: https://github.com/MarkTerlien/ttn_workshop en `Sign in`. 
 - Open de template _ttn\_workshop_ in je eigen Codespace via `Use this template => Open in a codespace`
 
-Er wordt nu online een nieuwe Codespace gemaakt op basis van de template. Deze template bevat verschillende folders met Python scripts. Ga naar de folder _sensor_\database_\v2_. Hier vind je het script *sensor_db_app.sql* dat nodig is om nieuwe devices met sensoren te registreren. Open het script _sensor\_db\_app.py_
+Er wordt nu online een nieuwe Codespace gemaakt op basis van de template. Deze template bevat verschillende folders met Python scripts. Ga naar de folder _sensor_\database_\v2_. Hier vind je het script *register_new_device.py* dat nodig is om nieuwe devices met sensoren te registreren. Open het script *register_new_device.py*.
 
 Het script wordt herkend als een Python script en daarom vraagt Codespaces om een Python extensie te installeren. Klik op `Install` om deze te installeren. 
 

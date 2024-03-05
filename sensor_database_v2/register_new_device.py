@@ -229,8 +229,6 @@ ADD_FIELDLAB = False
 ADD_DEVICE = False
 ADD_TAG = False
 ADD_DEVICE_TO_FIELDLAB = True
-ADD_MODEL = False
-ADD_PARAMETER = False
 
 # Open DB connection
 print('Open DB connection')
@@ -272,33 +270,6 @@ if ADD_DEVICE_TO_FIELDLAB:
     device_to_fieldlab_params['tag'] = 'deleteme'
     device_to_fieldlab_params['start_date'] = '2024-02-19'
     sensor_db.add_device_to_fieldlab(device_to_fieldlab_params)
-
-# Add models
-if ADD_PARAMETER:
-    print('Add model')
-    f = open(r'C:\git_repositories\Marnes\sensordata_infrastructuur\sensor_database_v2\sensor_parameters.csv')    
-    for row in f:
-        parameter_params = {}
-        if row.split(',')[0][0] != '#':
-            parameter_params['model_id'] = row.split(',')[0]
-            parameter_params['parameter_name'] = row.split(',')[1]
-            parameter_params['parameter_description'] = row.split(',')[2]
-            parameter_params['parameter_unit'] = row.split(',')[3].rstrip()
-            sensor_db.add_parameter(parameter_params)
-    f.close()
-
-# Add models
-if ADD_MODEL:
-    print('Add model')
-    f = open(r'C:\git_repositories\Marnes\sensordata_infrastructuur\sensor_database_v2\model_url.csv')
-    for row in f:
-        model_params = {}
-        print(row)
-        if row.split(',')[0][0] != '#':
-            model_params['model_id'] = row.split(',')[0]
-            model_params['model_url'] = row.split(',')[1] 
-            sensor_db.add_model(model_params)
-    f.close()
 
 # Commit
 print('Commit')
