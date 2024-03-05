@@ -17,7 +17,7 @@ Om databasetoegang te krijgen, hernoem je het bestand _db-dummy.txt_ naar _db.tx
 
 ## Foldersctructuur
 
-De folder *datamodel* bevat een beschrijving van het datamodel, het ERD van het datamodel en het SQL script *QuickDBD-Sensor Database 2.0.sql* om de tabellen en de views op de database te creëren.
+De folder *datamodel* bevat een beschrijving van het datamodel, het ERD van het datamodel en het SQL script *QuickDBD-Sensor Database 2.0.sql* om de tabellen en de views op de database te creëren en de metadata van de devices toe te voegen.
 
 De folder *sensor_metadata* bevat de volgende csv-bestanden:
 
