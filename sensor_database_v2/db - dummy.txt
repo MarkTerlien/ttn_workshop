@@ -1,0 +1,1 @@
+dlwecmaindb.postgres.database.azure.com:5432:dwh_hoeve_boveneind:db_user:db_password:

@@ -1,0 +1,26 @@
+# model,parameter_name,parameter_description,parameter_unit
+LSE01,Bat,Batterij,
+LSE01,TempC_DS18B20,Temperatuur,°C
+LSE01,conduct_SOIL,Bodemgeleiding,uS/cm
+LSE01,temp_SOIL,Bodemtemperatuur,°C
+LSE01,water_SOIL,Bodemvochtigheid,%
+sensecaps2120-8-in-1,Battery(%),Batterij,%
+sensecaps2120-8-in-1,Air Temperature,Lucht Temperatuur,°C
+sensecaps2120-8-in-1,Air Humidity,Lucht Vochtigheid,%RH
+sensecaps2120-8-in-1,Light Intensity,Licht intensiteit,lux
+sensecaps2120-8-in-1,UV Index,UV Index,
+sensecaps2120-8-in-1,Wind Speed,Windsnelheid,m/s
+sensecaps2120-8-in-1,Wind Direction Sensor,Windrichting,°
+sensecaps2120-8-in-1,Rain Gauge,Regenval,mm/h
+sensecaps2120-8-in-1,Barometric Pressure,Luchtdruk,hPa
+lsn50v2-s31,BatV,Batterij,Volt
+lsn50v2-s31,Hum_SHT,Vochtigheid,%RH
+lsn50v2-s31,TempC_SHT,Temperatuur,°C
+MCF-LW12TERPM,battery,Batterij,
+MCF-LW12TERPM,date,Datum,
+MCF-LW12TERPM,humidity,Vochtigheid,%RH
+MCF-LW12TERPM,pm1,Fijnstof kleiner dan 10 µm,µg/m3
+MCF-LW12TERPM,pm10,Fijnstof kleiner dan 10 µm,µg/m3 
+MCF-LW12TERPM,pm25,Fijnstof kleiner dan 25 µm,µg/m3 
+MCF-LW12TERPM,pressure,Luchtdruk,hPa
+MCF-LW12TERPM,temperature,Temperatuur,°C
