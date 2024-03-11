@@ -239,8 +239,8 @@ sensor_db.open_connection()
 if ADD_FIELDLAB:
     print('Add fieldlab')
     fieldlab_params = {}
-    fieldlab_params['fieldlab_name'] = 'deleteme'
-    fieldlab_params['fieldlab_description'] = 'deleteme' 
+    fieldlab_params['fieldlab_name'] = 'Mark Fieldlab'
+    fieldlab_params['fieldlab_description'] = 'Op dak van HAS' 
     fieldlab_params['lon'] = 3.1 
     fieldlab_params['lat'] = 53.2 
     sensor_db.add_fieldlab(fieldlab_params)
@@ -249,8 +249,8 @@ if ADD_FIELDLAB:
 if ADD_DEVICE:
     print('Add device')
     device_params = {}
-    device_params['end_dev_eui'] = 'deleteme'
-    device_params['installation_description'] = 'deleteme' 
+    device_params['end_dev_eui'] = 'Temp device'
+    device_params['installation_description'] = 'Op dak' 
     device_params['model_id'] = 'LSE01' #LSE01/sensecaps2120-8-in-1/lsn50v2-s31/MCF-LW12TERPM
     sensor_db.add_device(device_params)
 
@@ -258,17 +258,17 @@ if ADD_DEVICE:
 if ADD_TAG:
     print('Add tag')
     tag_params = {}
-    tag_params['tag'] = 'deleteme'
+    tag_params['tag'] = 'groen dak'
     sensor_db.add_tag(tag_params)
 
 # Add device to fieldlab
 if ADD_DEVICE_TO_FIELDLAB:
     print('Add device to fieldlab')
     device_to_fieldlab_params = {}
-    device_to_fieldlab_params['fieldlab_name'] = 'deleteme'
-    device_to_fieldlab_params['end_dev_eui'] = 'deleteme'
-    device_to_fieldlab_params['tag'] = 'deleteme'
-    device_to_fieldlab_params['start_date'] = '2024-02-19'
+    device_to_fieldlab_params['fieldlab_name'] = 'Mark Fieldlab'
+    device_to_fieldlab_params['end_dev_eui'] = 'Temp device'
+    device_to_fieldlab_params['tag'] = 'groen dak'
+    device_to_fieldlab_params['start_date'] = '2024-03-05'
     sensor_db.add_device_to_fieldlab(device_to_fieldlab_params)
 
 # Commit
