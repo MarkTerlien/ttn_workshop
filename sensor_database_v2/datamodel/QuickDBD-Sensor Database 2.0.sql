@@ -234,3 +234,5 @@ INSERT INTO parameter (parameter_name,parameter_description,parameter_unit,model
 	 ('pm10','Fijnstof kleiner dan 10 µm','µg/m3','MCF-LW12TERPM'),
 	 ('pm25','Fijnstof kleiner dan 25 µm','µg/m3','MCF-LW12TERPM'),
 	 ('temperature','Temperatuur','°C','MCF-LW12TERPM');
+
+	 
